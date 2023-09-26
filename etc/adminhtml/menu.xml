@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Bluethinkinc::top_level" title="Bluethinkinc"
+             module="Bluethinkinc_CityProvinceDropdown" sortOrder="9999" resource="Magento_Backend::content"/>
+        <add id="Bluethinkinc_CityProvinceDropdown::bluethinkinc_cityprovincedropdown_city"
+             title="City"
+             module="Bluethinkinc_CityProvinceDropdown"
+             sortOrder="9999"
+             resource="Magento_Backend::content"
+             parent="Bluethinkinc::top_level"
+             action="bluethinkinc_cityprovincedropdown/city/index"/>
+        <add id="Bluethinkinc_CityProvinceDropdown::bluethinkinc_cityprovincedropdown_region"
+             title="Region"
+             module="Bluethinkinc_CityProvinceDropdown"
+             sortOrder="9999"
+             resource="Magento_Backend::content"
+             parent="Bluethinkinc::top_level"
+             action="bluethinkinc_cityprovincedropdown/region/index"/>
+    </menu>
+</config>

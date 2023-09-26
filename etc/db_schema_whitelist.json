@@ -1,0 +1,13 @@
+{
+    "bluethinkinc_cityprovincedropdown_city": {
+        "column": {
+            "city_id": true,
+            "region_id": true,
+            "city_name": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "FK_EF22411AC09815D8613E811EE8600A69": true
+        }
+    }
+}

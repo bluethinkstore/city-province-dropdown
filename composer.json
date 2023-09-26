@@ -1,0 +1,22 @@
+{
+    "name": "bluethinkinc/module-city-province-dropdown",
+    "description": "city province dropdown",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "version": "1.0.1",
+    "authors": [
+        {
+            "name": "Bluethinkinc"            
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Bluethinkinc\\CityProvinceDropdown\\": ""
+        }
+    }
+}

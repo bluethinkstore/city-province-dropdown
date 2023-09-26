@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="bluethinkinc_cityprovincedropdown_city"
+           resource="default" engine="innodb"
+           comment="bluethinkinc_cityprovincedropdown_city Table">
+        <column xsi:type="int" name="city_id" padding="10"
+                unsigned="true" nullable="false" identity="true" comment="Entity Id"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="city_id"/>
+        </constraint>
+        <column name="region_id" nullable="false" xsi:type="int"
+                comment="region_id" identity="false" unsigned="true"/>
+        <column name="city_name" nullable="false" xsi:type="text"
+                comment="city_name"/>
+        <constraint
+            xsi:type="foreign"
+            referenceId="DIRECTORY_COUNTRY_REGION_REGION_ID_BLUETHINKINC_CITYPROVINCEDROPDOWN_CITY_CITY_ID"
+            table="city" column="region_id"
+            referenceTable="directory_country_region" referenceColumn="region_id"/>
+    </table>
+</schema>
+

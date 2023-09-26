@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="customer_account"/>
+    <body>
+        <referenceContainer name="content">
+<!--            <block class="Bluethinkinc\CityProvinceDropdown\Block\Checkout\Cities"-->
+<!--                   name="city-updater"-->
+<!--                   template="Bluethinkinc_CityProvinceDropdown::edit.phtml"/>-->
+
+            <block class="Magento\Customer\Block\Address\Edit" name="customer_address_edit"
+                   template="Bluethinkinc_CityProvinceDropdown::address/edit.phtml" cacheable="false">
+            <arguments>
+                <argument name="attribute_data"
+                          xsi:type="object">Magento\Customer\Block\DataProviders\AddressAttributeData</argument>
+                <argument name="post_code_config"
+                          xsi:type="object">Magento\Customer\Block\DataProviders\PostCodesPatternsAttributeData
+                </argument>
+                <argument name="view_model"
+                          xsi:type="object">Magento\Customer\ViewModel\Address</argument>
+                <argument name="region_provider"
+                          xsi:type="object">Magento\Customer\ViewModel\Address\RegionProvider</argument>
+                <argument name="get_default_state"
+                          xsi:type="object">Bluethinkinc\CityProvinceDropdown\ViewModel\Address\GetDefaultRegion
+                </argument>
+            </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
